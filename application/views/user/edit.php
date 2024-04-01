@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <h2>Edit User</h2>
         <?php echo form_open('user/update/'.$user['id']); ?>
             <div class="form-group">
@@ -25,10 +25,10 @@
                 <label>Email:</label>
                 <input class="form-control" type="email" name="email" value="<?php echo $user['email']; ?>">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Mobile:</label>
                 <input class="form-control" type="text" name="mobile" value="<?php echo $user['mobile']; ?>">
-            </div>
+            </div> -->
             <div class="form-group">
                 <label>Age:</label>
                 <input class="form-control" type="text" name="age" value="<?php echo $user['age']; ?>">

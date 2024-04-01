@@ -25,10 +25,10 @@
                 <label>Email:</label>
                 <input class="form-control" type="email" name="email" required>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Mobile:</label>
                 <input class="form-control" type="number" name="mobile" required>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label>Age:</label>
                 <input class="form-control" type="number" name="age" required>

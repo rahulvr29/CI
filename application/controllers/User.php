@@ -22,7 +22,7 @@ class User extends CI_Controller {
         $data = array(
             'username' => $this->input->post('username'),
             'email' => $this->input->post('email'),
-            'mobile' => $this->input->post('mobile'),
+            // 'mobile' => $this->input->post('mobile'),
             'age' => $this->input->post('age'),
             'gender' => $this->input->post('gender'),
             'password' => $this->input->post('password'),
@@ -40,7 +40,7 @@ class User extends CI_Controller {
         $data = array(
             'username' => $this->input->post('username'),
             'email' => $this->input->post('email'),
-            'mobile' => $this->input->post('mobile'),
+            // 'mobile' => $this->input->post('mobile'),
             'age' => $this->input->post('age'),
             'gender' => $this->input->post('gender'),
             'password' => $this->input->post('password'),

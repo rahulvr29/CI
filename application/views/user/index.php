@@ -11,10 +11,10 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="container p-5">
-            <h2>Users</h2>
-            <a class="btn btn-primary mb-3" href="<?php echo base_url('index.php/user/create'); ?>">Add User</a>
+    <div class="container mt-5">
+        <div class="container p-3">
+            <h2 class='text-center mb-5'>CodeIgniter Crud User Deatils</h2>
+            <a class="btn btn-primary mt-4 mb-2" href="<?php echo base_url('index.php/user/create'); ?>">Add User</a>
         </div>
         <table class="table table-striped">
             <thead>
@@ -22,9 +22,9 @@
                     <th>ID</th>
                     <th>Username</th>
                     <th>Email</th>
-                    <th>Mobile</th>
                     <th>Age</th>
                     <th>Gender</th>
+                    <th>Password</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -34,9 +34,9 @@
                     <td><?php echo $user['id']; ?></td>
                     <td><?php echo $user['username']; ?></td>
                     <td><?php echo $user['email']; ?></td>
-                    <td><?php echo $user['mobile']; ?></td>
                     <td><?php echo $user['age']; ?></td>
                     <td><?php echo $user['gender']; ?></td>
+                    <td><?php echo $user['password']; ?></td>
                     <td>
                         <a class="btn btn-sm btn-primary" href="<?php echo base_url('index.php/user/edit/' . $user['id']); ?>">Edit</a>
                         <a class="btn btn-sm btn-danger" href="<?php echo base_url('index.php/user/delete/' . $user['id']); ?>">Delete</a>
