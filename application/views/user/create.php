@@ -27,11 +27,11 @@
             </div>
             <div class="form-group">
                 <label>Mobile:</label>
-                <input class="form-control" type="text" name="mobile">
+                <input class="form-control" type="number" name="mobile">
             </div>
             <div class="form-group">
                 <label>Age:</label>
-                <input class="form-control" type="text" name="age">
+                <input class="form-control" type="number" name="age">
             </div>
             <div class="form-group">
                 <label>Gender:</label>

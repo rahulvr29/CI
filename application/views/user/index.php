@@ -12,11 +12,14 @@
 </head>
 <body>
     <div class="container">
-        <h2>Users</h2>
-        <a class="btn btn-primary mb-3" href="./user/create">Add User</a>
+        <div class="container p-5">
+            <h2>Users</h2>
+            <a class="btn btn-primary mb-3" href="<?php echo base_url('index.php/user/create'); ?>">Add User</a>
+        </div>
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Username</th>
                     <th>Email</th>
                     <th>Mobile</th>
@@ -28,14 +31,15 @@
             <tbody>
                 <?php foreach ($users as $user): ?>
                 <tr>
+                    <td><?php echo $user['id']; ?></td>
                     <td><?php echo $user['username']; ?></td>
                     <td><?php echo $user['email']; ?></td>
                     <td><?php echo $user['mobile']; ?></td>
                     <td><?php echo $user['age']; ?></td>
                     <td><?php echo $user['gender']; ?></td>
                     <td>
-                        <a class="btn btn-sm btn-primary" href="<?php echo base_url('user/edit/' . $user['id']); ?>">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="<?php echo base_url('user/delete/' . $user['id']); ?>">Delete</a>
+                        <a class="btn btn-sm btn-primary" href="<?php echo base_url('index.php/user/edit/' . $user['id']); ?>">Edit</a>
+                        <a class="btn btn-sm btn-danger" href="<?php echo base_url('index.php/user/delete/' . $user['id']); ?>">Delete</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
