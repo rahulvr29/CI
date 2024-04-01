@@ -41,7 +41,10 @@
                 <label>Password:</label>
                 <input class="form-control" type="password" name="password" value="<?php echo $user['password']; ?>">
             </div>
+            <div class='d-flex'>
             <button class="btn btn-primary" type="submit">Update User</button>
+            <div class='px-3'> <a href="index.php"><button class="btn btn-danger px-3">Cancel</button></a></div>
+            </div>
         <?php echo form_close(); ?>
     </div>
 
