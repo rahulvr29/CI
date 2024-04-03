@@ -5,8 +5,14 @@ class User extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
+        // Load necessary libraries and models
         $this->load->model('user_model');
         $this->load->helper('form');
+        
+        // Check session here if needed
+        if (!$this->session->userdata('username')) {
+            redirect('login'); // Redirect to login page if not logged in
+        }
     }
 
     public function index() {
@@ -22,7 +28,6 @@ class User extends CI_Controller {
         $data = array(
             'username' => $this->input->post('username'),
             'email' => $this->input->post('email'),
-            // 'mobile' => $this->input->post('mobile'),
             'age' => $this->input->post('age'),
             'gender' => $this->input->post('gender'),
             'password' => $this->input->post('password'),
@@ -40,7 +45,6 @@ class User extends CI_Controller {
         $data = array(
             'username' => $this->input->post('username'),
             'email' => $this->input->post('email'),
-            // 'mobile' => $this->input->post('mobile'),
             'age' => $this->input->post('age'),
             'gender' => $this->input->post('gender'),
             'password' => $this->input->post('password'),
@@ -51,7 +55,7 @@ class User extends CI_Controller {
 
     public function delete($id) {
         $this->user_model->delete_user($id);
-        redirect('user/index');
+        redirect('user');
     }
 }
 ?>
